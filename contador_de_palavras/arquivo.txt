@@ -1,0 +1,4 @@
+Este é um arquivo de teste
+Neste arquivo existe um conjunto de frases que seram utilizadas
+nos teste do arquivo
+Por tanto, ignore o contuedo desde arquivo
