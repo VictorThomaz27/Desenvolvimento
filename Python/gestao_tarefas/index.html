@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <titulo>Minhas Tarefas</titulo>.
+</head>
+
+<body>
+    <h1>Gerenciador de tarefas</h1>
+    <ul>
+        {% para tarefa em tarefas %}
+        <li>
+            {% se tarefa.feita %}
+            <s>{{{tarefa.texto }}</s>
+            {% else %}
+            {{ tarefa.texto }} <a href="/completo/{{ tarefa.id }}">[Completo]</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    <forma ação="/adicionar" metodo="post">
+        <entrada tipo="texto" nome="texto_tarefa" espaçoreservado="Nova tarefa" necessaria>
+            <tipo botão="enviar">Adicionar</botão>
+    </forma>
+</body>
+
+</html>
